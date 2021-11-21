@@ -1,0 +1,101 @@
+.header {
+  color: $white;
+}
+
+.nav__top {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  &-bg {
+    background-color: $mirage;
+  }
+}
+
+.nav__phone {
+  font-size: 15px;
+  line-height: 200%;
+}
+
+.social {
+  &__list {
+    justify-content: flex-start;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &__link {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &--instagram {
+      background-image: url("../img/icon-instagram.svg");
+    }
+
+    &--dribbble {
+      background-image: url("../img/icon-dribbble.svg");
+    }
+
+    &--twitter {
+      background-image: url("../img/icon-twitter.svg");
+    }
+
+    &--youtube {
+      background-image: url("../img/icon-youtube.svg");
+    }
+  }
+}
+
+.nav__bottom {
+  padding-top: 23px;
+  padding-bottom: 22px;
+
+  &-bg {
+    background-color: $bunker;
+  }
+}
+
+.header__logo {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.logo {
+  &__img {
+    display: block;
+    width: 50px;
+    height: 30px;
+  }
+
+  &__text {
+    display: block;
+    font-size: 30px;
+    line-height: 100%;
+    margin-left: 15px;
+    color: $main;
+  }
+}
+
+.menu {
+  &__list {
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-left: 63px;
+  }
+
+  &__link {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 16px;
+    line-height: 87%;
+    letter-spacing: 0.8px;
+  }
+}

@@ -1,8 +1,6 @@
+@import "vars";
 @import "mixins";
 @import "fonts";
-
-body {
-  font-family: "Mulish";
-  font-size: 18px;
-  line-height: 120%;
-}
+@import "general";
+@import "header";
+@import "footer";
