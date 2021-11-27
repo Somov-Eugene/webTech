@@ -10,11 +10,6 @@ body {
   min-width: 320px;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
 a,
 a:hover,
 a:focus,
@@ -66,4 +61,8 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.grid {
+  display: grid;
 }

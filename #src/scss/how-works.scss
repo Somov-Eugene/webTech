@@ -1,0 +1,127 @@
+.how-works {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: $mirage;
+  background-color: $white;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 70px;
+    position: relative;
+    padding-left: 38px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 121%;
+    letter-spacing: 1px;
+    text-align: center;
+
+    span {
+      color: $main;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: 35.5%;
+      height: 54px;
+      border-left: 3px solid $main;
+    }
+  }
+
+  &__list {
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    flex-direction: column;
+    width: 304px;
+
+    &-img {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      width: 180px;
+      height: 180px;
+      border-radius: 100%;
+    }
+
+    &-text {
+      display: block;
+      margin-bottom: 5px;
+      font-family: "Montserrat", sans-serif;;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 100%;
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    &:nth-child(1)::after {
+      content: "";
+      position: absolute;
+      top: 120px;
+      right: -136px;
+      width: 156px;
+      height: 26px;
+      background-image: url("../img/arrow-round-1.png");
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(2)::after {
+      content: "";
+      position: absolute;
+      top: 85px;
+      right: -136px;
+      width: 156px;
+      height: 26px;
+      background-image: url("../img/arrow-round-2.png");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.features {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  color: $white;
+  background-color: $ebony;
+
+  &__list {
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 25px;
+    row-gap: 60px;
+  }
+
+  &__item {
+    grid-column: span 4;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &-icon {
+      margin-right: 10px;
+      display: block;
+      width: 50px;
+      height: 50px;
+    }
+
+    &-title {
+      margin-top: 8px;
+      margin-bottom: 18px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 115%;
+      text-transform: capitalize;
+    }
+
+    &-descripton {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+}
