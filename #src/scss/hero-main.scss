@@ -1,0 +1,90 @@
+.hero {
+  position: relative;
+  color: $white;
+
+  &__bg {
+    min-height: 861px;
+    background-color: $mirage;
+    background-image:
+      url("../img/main/businessman.png"),
+      linear-gradient(to bottom, rgba(18, 27, 38, 0.73), rgba(18, 27, 38, 0.73)),
+      url("../img/main/bg-hero.jpg");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: right 32px, 0 0, 0 0;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: $white;
+      bottom: 0;
+      width: 100%;
+      height: 66px;
+      clip-path: path("M1441 66V0L0 66H1441Z");
+    }
+  }
+
+  &__slider {
+    position: absolute;
+    top: 290px;
+    max-width: 700px;
+
+    &-title {
+      position: relative;
+      margin: 0;
+      padding-left: 190px;
+      position: relative;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 300;
+      font-size: 50px;
+      line-height: 180%;
+
+      &::before { // counter
+        content: attr(data-counter);
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 140px;
+        line-height: 129%;
+        color: rgba($white, 0.13);
+      }
+
+      &::after { // vertical divider
+        content: "";
+        position: absolute;
+        top: 25px;
+        left: 170px;
+        height: 130px;
+        border-left: 3px solid $main;
+      }
+
+      span {
+        display: block;
+        color: $main;
+      }
+    }
+
+    &-description {
+      margin-top: 32px;
+      margin-bottom: 0;
+      font-size: 16px;
+      line-height: 156%;
+      max-width: 615px;
+    }
+  }
+
+  &__buttons {
+    position: absolute;
+    bottom: 200px;
+  }
+
+  &__btn-start {
+    padding: 17px 37px;
+    margin-right: 12px;
+  }
+
+  &__btn-learn {
+    padding: 17px 37px;
+  }
+}
