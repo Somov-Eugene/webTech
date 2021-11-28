@@ -1,0 +1,83 @@
+.reasons {
+  padding-top: 150px;
+  padding-bottom: 60px;
+  color: $ebony;
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-image:
+    linear-gradient(to bottom, rgba($alabaster, 0.9), rgba($alabaster, 0.9)),
+    url("../img/bg-reasons.jpg");
+
+  &__title {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 115%;
+    letter-spacing: 1px;
+
+    span {
+      display: block;
+      font-weight: 600;
+      color: $main;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: 0;
+      height: 100px;
+      border-left: 3px solid $main;
+    }
+  }
+
+  &__list {
+    max-width: 600px;
+    margin-top: 84px;
+    margin-bottom: 84px;
+    counter-reset: reasons-counter;
+  }
+
+  &__item {
+    margin-bottom: 46px;
+
+    &::before {
+      display: block;
+      counter-increment: reasons-counter;
+      content: ".0" counter(reasons-counter);
+      margin-bottom: 38px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-size: 45px;
+      line-height: 89%;
+      letter-spacing: 1px;
+      color: $lynch;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 28px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 187%;
+    letter-spacing: 1px;
+  }
+
+  &__description {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 187%;
+    color: #5C6F87;
+  }
+}
