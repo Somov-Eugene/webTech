@@ -81,3 +81,34 @@
     color: #5C6F87;
   }
 }
+
+.links {
+  &__img {
+    display: block;
+    width: 360px;
+    height: 360px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__link::after {
+    visibility: hidden;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image:
+      url("../img/icon-plus.svg"),
+      linear-gradient(to bottom, rgba(18, 27, 38, 0.73), rgba(18, 27, 38, 0.73));
+  }
+
+  &__link:hover::after {
+    visibility: visible;
+  }
+}
