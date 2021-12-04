@@ -15,4 +15,19 @@
   &--fill {
     background-color: $main;
   }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $white;
+    background-color: darken($main, 10%) ;
+  }
+
+  &:focus {
+    outline: 2px solid $mirage;
+  }
+
+  &:active {
+    background-color: darken($main, 15%) ;
+  }
 }
