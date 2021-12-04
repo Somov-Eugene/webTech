@@ -1,0 +1,149 @@
+.news {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  color: $ebony;
+  background-color: $white;
+
+  &__grid {
+    margin-top: 72px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 40px;
+  }
+
+  &__big-card {
+    grid-row: span 2;
+  }
+
+  &__title {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 35px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 115%;
+    letter-spacing: 1px;
+    text-align: center;
+    color: $ebony;
+
+    span {
+      color: $main;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: calc(43% - 27px);
+      height: 54px;
+      border-left: 3px solid $main;
+    }
+  }
+}
+
+.card {
+  position: relative;
+
+  &__img {
+    display: block;
+    object-fit: cover;
+    width: 370px;
+    height: 247px;
+
+    &--big {
+      width: 770px;
+      height: 330px;
+    }
+  }
+
+  &__tag {
+    position: absolute;
+    padding: 3px 9px;
+    top: 30px;
+    left: 30px;
+    font-size: 16px;
+    line-height: 187%;
+    color: $white;
+    background-color: $main;
+  }
+
+  &__text {
+    padding: 30px;
+    color: $white;
+    background-color: $mirage;
+
+    &--big {
+      padding: 65px;
+      color: $mirage;
+      background-color: $white;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 11px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 128%;
+    letter-spacing: 1px;
+
+    &--big {
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 135%;
+    }
+  }
+
+  &__title-info {
+    justify-content: flex-start;
+
+    &--big {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__author {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 49px;
+    font-size: 15px;
+    line-height: 200%;
+    text-transform: capitalize;
+
+    &--big {
+      color: #5C6F87;
+    }
+  }
+
+  &__date-publication {
+    font-size: 15px;
+    line-height: 200%;
+    text-transform: capitalize;
+
+    &--big {
+      color: #5C6F87;
+    }
+  }
+
+  &__annotation {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 187%;
+    color: #5C6F87;
+  }
+
+  &__detail-link {
+    display: inline-block;
+    margin-top: 56px;
+    font-size: 12px;
+    line-height: 250%;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: $ebony;
+  }
+}
