@@ -1,0 +1,66 @@
+.new-era {
+  position: relative;
+  padding-top: 145px;
+  padding-bottom: 145px;
+  color: $white;
+  background-color: $ebony;
+
+  &__img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 696px;
+    height: 865px;
+    background-repeat: no-repeat;
+    background-image: url("../img/bg-new-era.png");
+  }
+
+  &__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__text {
+    grid-column: 2/3;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 115%;
+    letter-spacing: 1px;
+
+    span {
+      display: block;
+      font-weight: 500;
+      font-size: 55px;
+      line-height: 125%;
+      color: $main;
+    }
+  }
+
+  &__description {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 1px;
+  }
+
+  &__buttons {
+    margin-top: 67px;
+  }
+
+  &__btn-start {
+    padding: 17px 37px;
+    margin-right: 20px;
+  }
+
+  &__btn-learn {
+    padding: 17px 37px;
+  }
+}
