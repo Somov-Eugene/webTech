@@ -49,6 +49,10 @@ a:hover {
   padding-left: 15px;
   padding-right: 15px;
   max-width: 1160px;
+
+  &--big {
+    max-width: 1200px;
+  }
 }
 
 .list-reset {
