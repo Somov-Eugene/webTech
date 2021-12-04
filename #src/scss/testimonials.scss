@@ -1,0 +1,122 @@
+.testimonials {
+  --duration-trans: 0.5s;
+
+  padding-top: 150px;
+  padding-bottom: 145px;
+  background-color: $white;
+
+  &__title {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 115%;
+    letter-spacing: 1px;
+    text-align: center;
+
+    span {
+      font-weight: 600;
+      color: $main;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: calc(35.5% - 27px);
+      height: 54px;
+      border-left: 3px solid $main;
+    }
+  }
+
+  &__photo {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    object-fit: cover;
+    transform: scale(0.75);
+    transition: transform var(--duration-trans) ease;
+  }
+
+  &__slider-photo {
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 623px;
+
+    & .swiper-slide {
+      display:flex;
+      justify-content:center;
+      align-items: center;
+    }
+
+    & .swiper-slide-active {
+      & .testimonials__photo {
+        transition: transform var(--duration-trans) ease;
+        transform: scale(1);
+      }
+    }
+
+    & .testimonials__button {
+      position: absolute;
+      top: calc(50% - 30px);
+      width: 60px;
+      height: 60px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &--prev {
+        left: -110px;
+        background-image: url("../img/arrow-prev-circle.svg");
+      }
+
+      &--next {
+        right: -110px;
+        background-image: url("../img/arrow-next-circle.svg");
+      }
+    }
+  }
+
+  &__slider-text {
+    margin: 0 auto;
+    max-width: 770px;
+  }
+
+  &__text {
+    flex-direction: column;
+
+    &-cite {
+      margin: 0;
+      margin-bottom: 44px;
+      font-size: 20px;
+      line-height: 155%;
+      text-align: center;
+      color: $blueBayoux;
+    }
+
+    &-author {
+      margin-top: 0;
+      margin-bottom: 9px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-size: 27px;
+      line-height: 128%;
+      letter-spacing: 1px;
+      color: $mirage;
+    }
+
+    &-job {
+      font-size: 16px;
+      line-height: 187%;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: $blueBayoux;
+    }
+  }
+}
