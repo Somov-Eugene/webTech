@@ -2,17 +2,88 @@
   position: relative;
   color: $white;
 
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 59px;
+    line-height: 127%;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-align: center;
+    color: $main;
+  }
+
+  &__breadcrumbs {
+    margin-top: 21px;
+    margin-bottom: 21px;
+  }
+
   &__bg {
+    padding-top: 100px;
     min-height: 318px;
     background-color: $mirage;
     background-repeat: no-repeat, no-repeat;
     background-position: center;
+
+    &--about {
+      background-image:
+        linear-gradient(to bottom, rgba(18, 27, 38, 0.73), rgba(18, 27, 38, 0.73)),
+        url("../img/bg-about.jpg");
+    }
+
+    &--blog {
+      background-image:
+        linear-gradient(to bottom, rgba(18, 27, 38, 0.73), rgba(18, 27, 38, 0.73)),
+        url("../img/bg-blog.jpg");
+    }
+
+    &--contacts {
+      background-image:
+        linear-gradient(to bottom, rgba(18, 27, 38, 0.73), rgba(18, 27, 38, 0.73)),
+        url("../img/bg-contacts.jpg");
+    }
+
+    &--portfolio {
+      background-image:
+        linear-gradient(to bottom, rgba(18, 27, 38, 0.73), rgba(18, 27, 38, 0.73)),
+        url("../img/bg-portfolio.jpg");
+    }
+
+    &--pricing {
+      background-image:
+        linear-gradient(to bottom, rgba(18, 27, 38, 0.73), rgba(18, 27, 38, 0.73)),
+        url("../img/bg-pricing.jpg");
+    }
+
+    &--services {
+      background-image:
+        linear-gradient(to bottom, rgba(18, 27, 38, 0.73), rgba(18, 27, 38, 0.73)),
+        url("../img/bg-services.jpg");
+    }
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+
+  &__item:not(:last-child) {
+    margin-right: 38px;
   }
 
-  &__bg--about {
-    background-image:
-    linear-gradient(to bottom, rgba(18, 27, 38, 0.73), rgba(18, 27, 38, 0.73)),
-    url("../img/main/bg-about.jpg");
-  }
+  &__link {
+    font-size: 20px;
+    line-height: 160%;
+    color: $white;
 
+    &:not([href]) {
+      color: $main;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }
