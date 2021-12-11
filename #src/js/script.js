@@ -16,30 +16,34 @@ const myScripts = () => {
     }
   });
 
-  const testimonialsSliderPhoto = new Swiper(".testimonials__slider--master", {
-    loop: true,
-    slidesPerView: 3,
-    spaceBetween: 85,
-    centeredSlides: true,
-    roundLengths: true,
-    navigation: {
-      prevEl: ".testimonials__button--prev",
-      nextEl: ".testimonials__button--next",
-    },
-  });
+  const sliderMaster = document.querySelector(".testimonials__slider--master");
+  const sliderSlave = document.querySelector(".testimonials__slider--slave");
 
-  const testimonialsSliderText = new Swiper(".testimonials__slider--slave", {
-    loop: true,
-    slidesPerView: "auto",
-    navigation: {
-      prevEl: ".testimonials__button--prev",
-      nextEl: ".testimonials__button--next",
-    },
-  });
+  if (sliderMaster && sliderSlave) {  // if exist sliders
+    const testimonialsSliderPhoto = new Swiper(sliderMaster, {
+      loop: true,
+      slidesPerView: 3,
+      spaceBetween: 85,
+      centeredSlides: true,
+      roundLengths: true,
+      navigation: {
+        prevEl: ".testimonials__button--prev",
+        nextEl: ".testimonials__button--next",
+      },
+    });
 
-  testimonialsSliderPhoto.controller.control = testimonialsSliderText;
-  testimonialsSliderText.controller.control = testimonialsSliderPhoto;
+    const testimonialsSliderText = new Swiper(sliderSlave, {
+      loop: true,
+      slidesPerView: "auto",
+      navigation: {
+        prevEl: ".testimonials__button--prev",
+        nextEl: ".testimonials__button--next",
+      },
+    });
 
+    testimonialsSliderPhoto.controller.control = testimonialsSliderText;
+    testimonialsSliderText.controller.control = testimonialsSliderPhoto;
+  }
 };
 
 myScripts();
